@@ -3,13 +3,12 @@ import Navbar from "./components/navbar/Navbar";
 
 import Home from "./pages/Home";
 import Courses from "./pages/Courses";
-import Arena from "./pages/Problems";
 import Faq from "./pages/Faq";
 import Login from "./pages/Login";
-import ProtectedRoute from "./router/ProtectedRoute";
 import Profile from "./pages/Profile";
 import ProblemDetail from "./pages/ProblemDetail";
 import Problems from "./pages/Problems";
+import Contests from "./pages/Contests";
 
 export default function App() {
   return (
@@ -18,8 +17,8 @@ export default function App() {
       <div className="p-6">
         <Routes>
           <Route index element={<Home />} />
-          <Route path="kurslar" element={<Courses />} />
-          <Route path="arena" element={<Arena />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/contests" element={<Contests />} />
           <Route path="/problems" element={<Problems />} />
           <Route path="/problem/:slug" element={<ProblemDetail />} />
 
