@@ -10,7 +10,8 @@ import {
   Code,
   LogIn,
   LogOut,
-  User
+  User,
+  FileText
 } from "lucide-react";
 import { useAuth } from "../../context/AuthContex";
 
@@ -59,6 +60,11 @@ function Navbar() {
             <Trophy size={16} /> Olimpiadalar
           </Link>
 
+          {/* === Postlar link === */}
+          <Link to="/posts" className="flex items-center gap-1 hover:text-blue-600 transition">
+            <FileText size={16} /> Postlar
+          </Link>
+
           {/* === Profile Dropdown === */}
           {isAuthenticated ? (
             <div className="relative">
@@ -74,7 +80,6 @@ function Navbar() {
                 <span>{user?.username || "User"}</span>
               </button>
 
-              {/* === Dropdown === */}
               {profileOpen && (
                 <div className="absolute right-0 mt-2 w-60 bg-white text-gray-700 rounded-xl border shadow-md py-2">
                   <div className="px-4 py-2 border-b">
@@ -136,6 +141,10 @@ function Navbar() {
 
           <Link onClick={() => setMenuOpen(false)} to="/contests" className="flex items-center gap-2 hover:text-blue-600">
             <Trophy size={16} /> Olimpiadalar
+          </Link>
+
+          <Link onClick={() => setMenuOpen(false)} to="/posts" className="flex items-center gap-2 hover:text-blue-600">
+            <FileText size={16} /> Postlar
           </Link>
 
           {isAuthenticated ? (

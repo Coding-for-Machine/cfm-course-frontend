@@ -9,6 +9,8 @@ import Profile from "./pages/Profile";
 import ProblemDetail from "./pages/ProblemDetail";
 import Problems from "./pages/Problems";
 import Contests from "./pages/Contests";
+import PostDetail from "./pages/PostDetail";
+import Posts from "./pages/Posts";
 
 export default function App() {
   return (
@@ -21,6 +23,10 @@ export default function App() {
           <Route path="/contests" element={<Contests />} />
           <Route path="/problems" element={<Problems />} />
           <Route path="/problem/:slug" element={<ProblemDetail />} />
+
+          {/* post */}
+          <Route path="/posts" element={<Posts />} />
+          <Route path="/post:slug" element={<PostDetail />} />
 
           <Route path="faq" element={<Faq />} />
           <Route path="profile" element={
