@@ -1,0 +1,130 @@
+/* src/pages/ProblemDetail.css */
+
+/* react-split gutter styling */
+.gutter {
+  background-color: #4B5563 !important;
+  opacity: 0.2;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transition: opacity 0.2s ease;
+}
+
+.gutter:hover {
+  opacity: 1;
+}
+
+.gutter.gutter-horizontal {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+  cursor: col-resize;
+  width: 8px !important;
+  margin: 0 -4px;
+}
+
+.gutter.gutter-vertical {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=');
+  cursor: row-resize;
+  height: 8px !important;
+  margin: -4px 0;
+}
+
+/* Fullscreen mode styling */
+:fullscreen {
+  background: #111827;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(31, 41, 55, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(107, 114, 128, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.7);
+}
+
+/* Monaco Editor scrollbar */
+.monaco-editor .scrollbar.vertical .slider {
+  background: rgba(107, 114, 128, 0.3) !important;
+}
+
+.monaco-editor .scrollbar.vertical .slider:hover {
+  background: rgba(156, 163, 175, 0.5) !important;
+}
+
+/* Code editor custom styling */
+.monaco-editor {
+  border-radius: 0 !important;
+}
+
+/* Prose content styling */
+.prose {
+  color: #d1d5db;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  color: #f3f4f6;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.prose p {
+  margin-bottom: 1em;
+  line-height: 1.6;
+}
+
+.prose code {
+  background: rgba(55, 65, 81, 0.5);
+  color: #e5e7eb;
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+}
+
+.prose pre {
+  background: rgba(17, 24, 39, 0.5);
+  border: 1px solid rgba(55, 65, 81, 0.5);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.prose pre code {
+  background: transparent;
+  padding: 0;
+  color: #e5e7eb;
+}
+
+.prose ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.prose ol {
+  list-style-type: decimal;
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.prose li {
+  margin-bottom: 0.5em;
+}
+
+/* Split container */
+.split-container {
+  display: flex;
+  height: 100%;
+}
